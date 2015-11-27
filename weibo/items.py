@@ -6,29 +6,22 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy import Item
 
-
-class WeiboItem(scrapy.Item):
+class ListElement(object):
+    def __init__(self):
+        self.mid = ''
+        self.title = ''
+        self.topic = ''
+        self.topic_url = ''
+        self.content = ''
+        self.created_timestamp = ''  
+        self.img_list = []
+        self.reposts_count = 0
+        self.comments_count = 0
+        self.like_count = 0
+        
+class WeiboItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    mid = scrapy.Field()
-    news_content = scrapy.Field()
-    news_time = scrapy.Field()
-    news_url = scrapy.Field()
-    news_title = scrapy.Field()
-    news_mid = scrapy.Field()
-    news_refer_num = scrapy.Field()
-    news_comment_num = scrapy.Field()
-    news_like_num = scrapy.Field()
-    news_comment = scrapy.Field()
-    news_img_url = scrapy.Field()
-    comments = scrapy.Field()
-    pass
-
-class DmozItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    title = scrapy.Field()
-    link = scrapy.Field()
-    desc = scrapy.Field()
-    pass
+    element = scrapy.Field()

@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+#BOT_NAME = 'rmrb'
+#SPIDER_MODULES = ['rmrb.spiders']
+#NEWSPIDER_MODULE = 'rmrb.spiders'
+
+
 BOT_NAME = 'rmrb'
-SPIDER_MODULES = ['rmrb.spiders']
-NEWSPIDER_MODULE = 'rmrb.spiders'
-
-
-BOT_NAME = 'breakingnews'
-SPIDER_MODULES = ['breakingnews.spiders']
-NEWSPIDER_MODULE = 'breakingnews.spiders'
+SPIDER_MODULES = ['weibo.spiders']
+NEWSPIDER_MODULE = 'weibo.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'breakingnews (+http://www.yourdomain.com)'
@@ -66,7 +66,6 @@ NEWSPIDER_MODULE = 'breakingnews.spiders'
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
         'weibo.pipelines.WeiboPipeline': 100,
-        'weibo.pipelines.WeiboPipeline': 100
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

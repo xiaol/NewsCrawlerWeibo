@@ -8,7 +8,7 @@
 import scrapy
 from scrapy import Item
 
-class ListElement(object):
+class WeiboElement(object):
     def __init__(self):
         self.mid = ''
         self.title = ''
@@ -24,4 +24,4 @@ class ListElement(object):
 class WeiboItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    element = scrapy.Field()
+    weibo_list_item = scrapy.Field()

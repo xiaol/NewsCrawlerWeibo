@@ -11,7 +11,7 @@ class WeiboPipeline(object):
 
     def process_item(self, item, spider):
         print 1000 *'^'
-        line = item['element'][0].content
+        line = item['weibo_list_item'][0].content
         print line
         print 1000 *'^'
         return item
